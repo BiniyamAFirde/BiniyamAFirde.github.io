@@ -21,7 +21,7 @@
 					<div id="intro">
 						<h1>Biniyam Awalachew Firde <br />
 							Portfolio</h1>
-						<p>Data Analyst Skilled in SQL, Python, R, and Tableau <a href="https://www.linkedin.com/in/biniyam-awalachew-firde-069791306/">@Biniyam</a> </p>
+						<p>Data Analyst skilled in SQL, Python, and Tableau <a href="https://www.linkedin.com/in/biniyam-awalachew-firde-069791306/">@Biniyam</a> </p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -35,8 +35,14 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="#featured-work" class="scrolly">Featured</a></li>
+							<li><a href="#team-project" class="scrolly">Team</a></li>
+							<li><a href="#secondary-projects" class="scrolly">Projects</a></li>
+							<li><a href="#research" class="scrolly">Research</a></li>
+							<li><a href="#skills" class="scrolly">Skills</a></li>
+							<li><a href="#about" class="scrolly">About</a></li>
+							<li><a href="#contact" class="scrolly">Contact</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/biniyam-awalachew-firde-069791306/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
@@ -47,37 +53,128 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql">Data Cleaning in SQL<br />
-									</a></h2>
-									<p>This project focuses on cleaning and standardizing a movies dataset using SQL to improve data quality and consistency. </p>
-								</header>
-								<a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql" class="image main"><img src="images/top 10 movies.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql" class="button large">View Project</a></li>
-								</ul>
-							</article>
+						<!-- Featured Work -->
+							<header class="major" id="featured-work">
+								<h2>Featured Work</h2>
+							</header>
 
-						<!-- Posts -->
+							<!-- Featured Post -->
+								<article class="post featured">
+									<header class="major">
+										<h2><a href="https://github.com/BiniyamAFirde/energy-intelligence-platform">Energy Intelligence Platform<br />
+										</a></h2>
+										<p>A full-stack energy analytics platform built on the Building Data Genome Project 2 dataset &mdash; 60 real buildings, over a million hourly electricity readings. A FastAPI and PostgreSQL backend feeds a Random Forest model that forecasts each building's next 24 hours of consumption (test RMSE 29.22 kWh vs. 77.64 kWh for the strongest seasonal-naive baseline) and four anomaly detectors evaluated against a synthetic injection benchmark, since the dataset has no real anomaly labels. A React and TypeScript dashboard exposes both, alongside an external-inference feature that scores a building the model has never seen. Runs locally via Docker Compose, backed by 310 backend and 29 frontend tests &mdash; not deployed to the cloud, by design.</p>
+									</header>
+									<a href="images/energy-intelligence-platform/dashboard-cover.jpg" class="image main"><img src="images/energy-intelligence-platform/dashboard-cover.jpg" alt="Live Energy Intelligence Platform dashboard showing 60 buildings, 230 million kWh total consumption, and 99,651 anomaly alerts" /></a>
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<a href="images/energy-intelligence-platform/forecasting.jpg" class="image fit"><img src="images/energy-intelligence-platform/forecasting.jpg" alt="Live Forecasting page: actual vs. forecast consumption chart for a sample building" /></a>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<a href="images/energy-intelligence-platform/anomalies.jpg" class="image fit"><img src="images/energy-intelligence-platform/anomalies.jpg" alt="Live Anomalies page: alerts by detector and by severity across all 60 buildings" /></a>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<a href="images/energy-intelligence-platform/model-comparison.png" class="image fit"><img src="images/energy-intelligence-platform/model-comparison.png" alt="Chart comparing Random Forest against seasonal-naive, Ridge, and HistGradientBoosting baselines by RMSE" /></a>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<a href="images/energy-intelligence-platform/example-anomaly.png" class="image fit"><img src="images/energy-intelligence-platform/example-anomaly.png" alt="Example flagged anomaly: a 634.58 kWh spike, 7,873 times the local median reading" /></a>
+										</div>
+									</div>
+									<ul class="actions special">
+										<li><a href="https://github.com/BiniyamAFirde/energy-intelligence-platform" class="button large">View Project</a></li>
+									</ul>
+								</article>
+
+							<!-- Posts -->
+								<section class="posts">
+									<article>
+										<header>
+											<h2><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb">Croatian Fisheries: Cleaning, Classification &amp; Clustering<br />
+											</a></h2>
+										</header>
+										<a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb" class="image fit"><img src="images/fishery data.png" alt="" /></a>
+										<p>An end-to-end data science case study merging eight Eurostat datasets on Croatia's fishing industry. After IQR-based outlier cleaning, a Gradient Boosting regression model reached R&sup2; = 0.9174, a four-way classifier comparison (SVM, Naive Bayes, Logistic Regression, KNN) identified Logistic Regression as the strongest performer, and K-means clustering with PCA &mdash; validated via elbow and silhouette methods &mdash; surfaced distinct fleet groupings.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb" class="button">Cleaning &amp; Regression</a></li>
+											<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Classification.ipynb" class="button">Classification</a></li>
+											<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Cluster_Analysis_.ipynb" class="button">Clustering</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+											<h2><a href="#research">Tiny Two-Leg Spinal CPG: Network-Size Reduction<br />
+											</a></h2>
+										</header>
+										<p>A computational-neuroscience project reducing a spiking neural network model of a two-leg spinal central pattern generator, built in the NEST simulator. The reduced network keeps roughly 2.45% of the baseline's synapses while preserving the flexor/extensor alternation that produces walking-like rhythm (corr(Force) = &minus;0.957 &plusmn; 0.010 across 8 seeds, vs. &minus;0.953 for the full network). Full methodology in the Research section below.</p>
+										<ul class="actions special">
+											<li><a href="#research" class="button">Read the Research</a></li>
+											<li><a href="https://github.com/BiniyamAFirde/Optimization" class="button">View Repository</a></li>
+										</ul>
+									</article>
+								</section>
+
+						<!-- Team Project -->
+							<header class="major" id="team-project">
+								<h2>Team Project</h2>
+							</header>
 							<section class="posts">
 								<article>
 									<header>
-										
-										<h2><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb"> Data Cleaning With Python<br />
+										<h2><a href="https://github.com/BiniyamAFirde/CinemaTicketSystemversion2">Cinema Ticket System<br />
 										</a></h2>
 									</header>
-									<a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb" class="image fit"><img src="images/fishery data.png" alt="" /></a>
-									<p>This project integrates and analyzes data from eight distinct datasets related to Croatian fisheries, using Python for data cleaning, merging, and exploratory analysis. The goal is to uncover patterns and insights into Croatia’s fishing industry through data-driven techniques.</p>
+									<p>A cinema ticket reservation system built with a partner as coursework for the Graphical User Interface (EGUI) course at Warsaw University of Technology, using ASP.NET Core MVC, Entity Framework Core, and MySQL with ASP.NET Identity for authentication.</p>
+									<p><strong>My contributions:</strong></p>
+									<ul>
+										<li>User authentication and Identity integration</li>
+										<li>Seat selection and booking logic</li>
+										<li>Movie and showtime management</li>
+										<li>Database design and Entity Framework Core</li>
+										<li>Frontend views and UI</li>
+										<li>Admin dashboard</li>
+										<li>Testing and debugging</li>
+									</ul>
 									<ul class="actions special">
-										<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Data_Cleaning.ipynb" class="button">View Project</a></li>
+										<li><a href="https://github.com/BiniyamAFirde/CinemaTicketSystemversion2" class="button">View Repository</a></li>
+									</ul>
+								</article>
+							</section>
+
+						<!-- Secondary Projects -->
+							<header class="major" id="secondary-projects">
+								<h2>Secondary Projects</h2>
+							</header>
+							<section class="posts">
+								<article>
+									<header>
+										<h2><a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql">Data Cleaning in SQL<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql" class="image fit"><img src="images/top 10 movies.png" alt="" /></a>
+									<p>Cleaning and standardizing a movies dataset using SQL to improve data quality and consistency.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/BiniyamAFirde/SQL-Data-Cleaning/blob/main/movie2.sql" class="button">View Project</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
-										
+										<h2><a href="https://github.com/BiniyamAFirde/ICU-Beds-Analysis/blob/main/ICU_BEDS_IN_USA.ipynb">ICU Beds Analysis<br />
+										</a></h2>
+									</header>
+									<a href="images/icu-beds-analysis/beds-per-capita-cover.png" class="image fit"><img src="images/icu-beds-analysis/beds-per-capita-cover.png" alt="Bar chart of average ICU beds per capita by U.S. state, computed in the analysis notebook" /></a>
+									<p>Analyzing ICU bed capacity across 3,142 US counties to identify regions at highest risk of shortage, using Python for data cleaning and analysis. Over half of US counties (50.5%) fall into the high-risk category, with a median of 0.0002 ICU beds per capita. Explore the interactive dashboard on Tableau Public.</p>
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<a href="images/icu-beds-analysis/shortage-risk-scatter.png" class="image fit"><img src="images/icu-beds-analysis/shortage-risk-scatter.png" alt="Scatter plot of ICU shortage risk by county, color-coded from low to high risk" /></a>
+										</div>
+									</div>
+									<ul class="actions special">
+										<li><a href="https://github.com/BiniyamAFirde/ICU-Beds-Analysis/blob/main/ICU_BEDS_IN_USA.ipynb" class="button">View Notebook</a></li>
+										<li><a href="https://public.tableau.com/views/ICUBEDPROJECT/Dashboard1" class="button">Interactive Dashboard</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
 										<h2><a href="https://public.tableau.com/app/profile/biniyam.awalachew.firde/vizzes">Tableau Projects<br />
 										</a></h2>
 									</header>
@@ -87,37 +184,76 @@
 										<li><a href="https://public.tableau.com/app/profile/biniyam.awalachew.firde/vizzes" class="button">View Project</a></li>
 									</ul>
 								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Classification.ipynb">Fishing Fleet Classification: Machine Learning<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Classification.ipynb" class="image fit"><img src="images/classification.png" alt="" /></a>
-									<p>This project uses machine learning to classify fishing fleets based on operational and economic factors. It provides insights into fleet composition and efficiency.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Classification.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Cluster_Analysis_.ipynb">Cluster Analysis With Python<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Cluster_Analysis_.ipynb" class="image fit"><img src="images/clustering analysis.png" alt="" /></a>
-									<p>This project applies cluster analysis techniques using Python to identify patterns and group similar data. It helps uncover hidden relationships within complex datasets.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/BiniyamAFirde/Datamining-Project/blob/main/Cluster_Analysis_.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
-								
-								
+							</section>
 
+						<!-- Research -->
+							<header class="major" id="research">
+								<h2>Research</h2>
+							</header>
+							<article class="post">
+								<header class="major">
+									<h2><a href="https://github.com/BiniyamAFirde/Optimization">Tiny Two-Leg Spinal CPG &mdash; Network-Size Reduction<br />
+									</a></h2>
+								</header>
+								<p>Biologically detailed spinal central pattern generator (CPG) models are large and computationally expensive to simulate. This project asks how far a spiking neural network model of a two-leg CPG can be reduced &mdash; in both connectivity and neuron count &mdash; before it loses the flexor/extensor alternation that produces walking-like rhythm.</p>
+								<p>Built on the open-source NEST simulator, extending the third-party tinyCPG framework, the reduced network keeps k = 0.20 connectivity and m = 0.35 neuron count &mdash; 35 rhythm-generator neurons per half-centre and 17 interneurons, roughly 2.45% of the baseline network's synapses. Two corrections made this work: inhibitory weight compensation (scaling up the surviving reciprocal-inhibition synapses to replace those lost to reduction) and activation-gate recalibration (re-centering the readout that converts firing rate into muscle force, calibrated for the intact network's firing range).</p>
+								<p>The reduced network preserves extensor/flexor anti-correlation at corr(Force) = &minus;0.957 &plusmn; 0.010 across 8 random seeds, against a full-network baseline of &minus;0.953 &mdash; essentially matching the original circuit's behavior at a fraction of its size. All figures are the project's own recorded experiment results (staged E0&ndash;E8g summaries, CSVs, and force-trace plots committed to the repository); they were not independently reproduced for this portfolio.</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/BiniyamAFirde/Optimization/blob/main/cpg100/docs/CPG100_Progress_report.pdf" class="button large">Read the Full Report (PDF)</a></li>
+									<li><a href="https://github.com/BiniyamAFirde/Optimization" class="button">View Repository</a></li>
+								</ul>
+							</article>
 
+						<!-- Skills -->
+							<header class="major" id="skills">
+								<h2>Skills</h2>
+							</header>
+							<section class="split">
+								<section>
+									<h3>Data Science &amp; Machine Learning</h3>
+									<p>Python, Pandas, scikit-learn (Random Forest, Gradient Boosting, Isolation Forest, SVM, KNN, Logistic Regression, K-means, PCA), Jupyter, NEST (spiking neural networks)</p>
+								</section>
+								<section>
+									<h3>Backend &amp; Software Engineering</h3>
+									<p>FastAPI, ASP.NET Core MVC, Entity Framework Core, ASP.NET Identity, C#</p>
+								</section>
+								<section>
+									<h3>Frontend</h3>
+									<p>React, TypeScript</p>
+								</section>
+								<section>
+									<h3>Databases</h3>
+									<p>PostgreSQL, MySQL, BigQuery, Alembic migrations</p>
+								</section>
+								<section>
+									<h3>Data Visualization</h3>
+									<p>Tableau</p>
+								</section>
+								<section>
+									<h3>Infrastructure</h3>
+									<p>Docker, Docker Compose</p>
+								</section>
+								<section>
+									<h3>Foundations</h3>
+									<p>Algorithms (Python), SQL, Assembly (RISC-V &amp; x86 NASM), JavaScript &mdash; <a href="https://github.com/BiniyamAFirde">see GitHub</a></p>
+								</section>
+							</section>
 
+						<!-- About -->
+							<header class="major" id="about">
+								<h2>About</h2>
+							</header>
+							<article class="post">
+								<p>Biniyam Awalachew Firde is based in Messina, Italy, working across data analysis, machine learning, and software engineering. Recent work spans a full-stack energy analytics platform with forecasting and anomaly detection, computational neuroscience research on spiking neural networks, and applied data science projects using SQL, Python, and Tableau.</p>
+							</article>
 
+					</div>
 
+				<!-- Footer / Contact -->
+					<footer id="footer">
+						<header class="major" id="contact">
+							<h2>Contact</h2>
+						</header>
 						<section class="split contact">
 							<section class="alt">
 								<h3>Location</h3>
@@ -126,16 +262,15 @@
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="#">(+39) 351 615-1681</a></p>
+								<p><a href="tel:+393516151681">(+39) 351 615-1681</a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">biniyam22awlachew@gmail.com</a></p>
+								<p><a href="mailto:biniyam22awlachew@gmail.com">biniyam22awlachew@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									
 									<li><a href="https://www.linkedin.com/in/biniyam-awalachew-firde-069791306/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
 									<li><a href="https://github.com/BiniyamAFirde" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
@@ -145,7 +280,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Biniyam Awalachew Firde</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
